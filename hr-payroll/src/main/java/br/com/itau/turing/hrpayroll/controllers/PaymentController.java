@@ -20,6 +20,6 @@ public class PaymentController {
     @GetMapping("/{id}/days/{days}")
     public ResponseEntity<Payment> getPayment(@PathVariable UUID id, @PathVariable Integer days) {
         Payment payment = paymentService.getPayment(id, days);
-        return ResponseEntity.ok().body(payment);
+        return ResponseEntity.ok(payment);
     }
 }
