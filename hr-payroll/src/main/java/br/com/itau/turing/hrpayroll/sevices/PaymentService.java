@@ -12,7 +12,11 @@ import java.util.UUID;
 @Service
 public class PaymentService {
     @Autowired
-    private WorkerFeignClient workerFeignClient;
+    private final WorkerFeignClient workerFeignClient;
+
+    public PaymentService(WorkerFeignClient workerFeignClient) {
+        this.workerFeignClient = workerFeignClient;
+    }
 
     public Payment getPayment(UUID workerId, int days) {
         Worker worker = workerFeignClient.findById(workerId).getBody();
