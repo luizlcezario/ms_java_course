@@ -1,15 +1,15 @@
-package br.com.itau.turing.hrworker;
+package br.com.itau.turing.gateway;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
-@EnableEurekaClient
 @SpringBootApplication
-public class HrWorkerApplication {
+@EnableEurekaClient
+public class GatewayApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(HrWorkerApplication.class, args);
+		SpringApplication.run(GatewayApplication.class, args);
 	}
 
 }
