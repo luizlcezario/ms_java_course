@@ -1,0 +1,15 @@
+<table>
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Valor a pagar</th>
+            <th>Descrição</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="account : ${account}">
+            <td th:text="${account.name}"></td>
+            <td th:text="${account.value}"></td>
+            <td th:text="${account.description}"></td>
+        </tr>
+</table>
